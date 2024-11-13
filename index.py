@@ -17,10 +17,10 @@ response = client.chat.completions.create(
     messages=[
         {
             "role": "user",
-            "content": "Say this is a test",
+            "content": "讲个笑话",
         }
     ],
     model="gpt-3.5-turbo",
 )
 
-print(response)
+print(response.choices[0].message.content)  
